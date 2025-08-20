@@ -1,0 +1,39 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+import MobileNav from '../components/common/MobileNav.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const props = Astro.props;
+---
+
+<BaseLayout {...props}>
+  <Header />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+  <MobileNav />
+</BaseLayout>
+
+<style>
+  main {
+    min-height: 100vh;
+    padding-top: 80px; /* ヘッダーの高さ分 */
+  }
+  
+  @media (max-width: 768px) {
+    main {
+      padding-top: 60px;
+      padding-bottom: 80px; /* モバイルナビの高さ分 */
+    }
+  }
+</style>

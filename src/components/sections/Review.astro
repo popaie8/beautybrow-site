@@ -1,0 +1,184 @@
+---
+const reviews = [
+  {
+    rating: 5,
+    comment: '初めてのまつ毛パーマでしたが、とても丁寧に説明していただき安心でした。仕上がりも自然で大満足です！',
+    author: '30代女性',
+  },
+  {
+    rating: 5,
+    comment: '眉の形がコンプレックスでしたが、骨格に合わせたデザインをしていただき、顔の印象が変わりました。',
+    author: '20代女性',
+  },
+  {
+    rating: 5,
+    comment: '個室でリラックスできる空間でした。21時まで営業しているので仕事帰りに通えるのが嬉しいです。',
+    author: '40代女性',
+  },
+];
+---
+
+<section class="review section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">REVIEW</span>
+      <h2 class="section-title">お客様の声</h2>
+      <div class="review-rating">
+        <div class="stars">
+          {[...Array(5)].map(() => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          ))}
+        </div>
+        <span class="rating-text">4.8 / 5.0</span>
+      </div>
+    </div>
+    
+    <div class="review-grid">
+      {reviews.map((review) => (
+        <div class="review-card">
+          <div class="review-stars">
+            {[...Array(review.rating)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            ))}
+          </div>
+          <p class="review-comment">{review.comment}</p>
+          <div class="review-author">{review.author}</div>
+        </div>
+      ))}
+    </div>
+    
+    <div class="review-action">
+      <a href={`https://beauty.hotpepper.jp/kr/slnH000614329/`} target="_blank" rel="noopener" class="btn-primary">
+        予約する
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .review {
+    background: var(--color-base);
+  }
+  
+  .container {
+    max-width: var(--container-width, 1120px);
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+  }
+  
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  
+  .review-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .stars {
+    display: flex;
+    gap: 0.25rem;
+    color: #FFB800;
+  }
+  
+  .rating-text {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  
+  .review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .review-card {
+    padding: 1.5rem;
+    background: var(--color-bg-muted);
+    border-radius: 1rem;
+  }
+  
+  .review-stars {
+    display: flex;
+    gap: 0.25rem;
+    color: #FFB800;
+    margin-bottom: 1rem;
+  }
+  
+  .review-comment {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  
+  .review-author {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+  
+  .review-action {
+    text-align: center;
+  }
+  
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--color-accent);
+    color: white;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition-base);
+  }
+  
+  .btn-primary:hover {
+    background: var(--color-accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(173, 165, 139, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+    }
+    
+    .review-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>

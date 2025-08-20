@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>施術の流れ｜ビューティーブロウ 柏店｜眉×まつ毛パーマ専門サロン</title>
+  <meta name="description" content="ビューティーブロウの施術の流れをご紹介。初回カウンセリングから仕上げまで、完全個室での丁寧な施術プロセスをご案内します。">
+  <link rel="canonical" href="https://beautybrow-jp.vercel.app/flow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #A89E86;
+      --color-primary-hover: #8E836A;
+      --color-secondary: #FAF8F5;
+      --color-accent: #B8860B;
+      --color-line: #EAE7E1;
+      --color-paper: #FAF8F5;
+      --color-text: #111827;
+      --color-text-muted: #6B7280;
+      --color-text-light: #9CA3AF;
+      --font-heading: "Noto Serif JP", serif;
+      --font-body: "Noto Sans JP", "Hiragino Sans", sans-serif;
+      --space-xs: 0.5rem;
+      --space-sm: 0.75rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2rem;
+      --space-2xl: 3rem;
+      --space-3xl: 4rem;
+      --container-max: 1120px;
+      --container-narrow: 800px;
+      --border-radius: 0.75rem;
+      --border-radius-lg: 1rem;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      font-feature-settings: "palt";
+    }
+    
+    body {
+      font-family: var(--font-body);
+      line-height: 1.7;
+      color: var(--color-text);
+      background: white;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .font-serif {
+      font-family: var(--font-heading);
+    }
+    
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--space-lg);
+    }
+    
+    .container-narrow {
+      max-width: var(--container-narrow);
+      margin: 0 auto;
+      padding: 0 var(--space-lg);
+    }
+    
+    .eyebrow {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: var(--space-md);
+    }
+    
+    .section {
+      padding: var(--space-3xl) 0;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-sm) var(--space-lg);
+      border-radius: 50px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      font-size: 0.875rem;
+    }
+    
+    .btn--primary {
+      background: var(--color-primary);
+      color: white;
+    }
+    
+    .btn--primary:hover {
+      background: var(--color-primary-hover);
+      transform: translateY(-1px);
+    }
+    
+    .text-center {
+      text-align: center;
+    }
+    
+    .text-muted {
+      color: var(--color-text-muted);
+    }
+    
+    .flow-step {
+      display: flex;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-3xl);
+      align-items: flex-start;
+    }
+    
+    .flow-step:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    
+    .flow-number {
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.75rem;
+      font-weight: 700;
+      position: relative;
+    }
+    
+    .flow-number::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 60px;
+      background: linear-gradient(to bottom, var(--color-primary), transparent);
+      z-index: -1;
+    }
+    
+    .flow-step:last-child .flow-number::after {
+      display: none;
+    }
+    
+    .flow-content {
+      flex: 1;
+      padding-top: var(--space-sm);
+    }
+    
+    .flow-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+      color: var(--color-primary);
+    }
+    
+    .flow-description {
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .flow-details {
+      background: var(--color-secondary);
+      padding: var(--space-lg);
+      border-radius: var(--border-radius);
+      border-left: 4px solid var(--color-primary);
+    }
+    
+    .flow-details h4 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+      color: var(--color-text);
+    }
+    
+    .flow-details ul {
+      list-style: none;
+      margin: 0;
+    }
+    
+    .flow-details li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: var(--space-xs);
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+    
+    .flow-details li:before {
+      content: "•";
+      color: var(--color-primary);
+      font-weight: 700;
+      margin-right: var(--space-sm);
+      margin-top: 2px;
+    }
+    
+    @media (max-width: 768px) {
+      .container,
+      .container-narrow {
+        padding: 0 var(--space-md);
+      }
+      
+      .section {
+        padding: var(--space-xl) 0;
+      }
+      
+      .flow-step,
+      .flow-step:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: var(--space-2xl);
+      }
+      
+      .flow-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin: 0 auto;
+      }
+      
+      .flow-number::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .flow-content {
+        padding-top: var(--space-md);
+      }
+      
+      .flow-title {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-line);">
+    <div class="container" style="padding: var(--space-md) var(--space-lg);">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <a href="/" style="text-decoration: none; color: var(--color-text);">
+          <div class="font-serif" style="font-size: 1.5rem; font-weight: 600;">Beauty Brow</div>
+          <div style="font-size: 0.625rem; color: var(--color-text-muted); letter-spacing: 0.1em;">眉×まつ毛パーマ専門</div>
+        </a>
+        <nav style="display: none; gap: var(--space-lg); align-items: center;">
+          <a href="/about" style="color: var(--color-text-muted); text-decoration: none; font-size: 0.875rem; font-weight: 500;">私たちについて</a>
+          <a href="/menu" style="color: var(--color-text-muted); text-decoration: none; font-size: 0.875rem; font-weight: 500;">メニュー</a>
+          <a href="/flow" style="color: var(--color-primary); text-decoration: none; font-size: 0.875rem; font-weight: 600;">施術の流れ</a>
+          <a href="/salon" style="color: var(--color-text-muted); text-decoration: none; font-size: 0.875rem; font-weight: 500;">店舗情報</a>
+          <a href="/recruit" style="color: var(--color-text-muted); text-decoration: none; font-size: 0.875rem; font-weight: 500;">採用情報</a>
+        </nav>
+        <a href="https://beauty.hotpepper.jp/kr/slnH000614329/" target="_blank" rel="noopener" class="btn btn--primary">予約する</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 80px;">
+    <!-- Page Header -->
+    <section style="background: var(--color-secondary); padding: var(--space-3xl) 0;">
+      <div class="container-narrow text-center">
+        <div class="eyebrow">Process</div>
+        <h1 class="font-serif" style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; margin-bottom: var(--space-lg);">施術の流れ</h1>
+        <p style="font-size: 1.125rem; color: var(--color-text-muted);">完全個室での丁寧な施術プロセス</p>
+      </div>
+    </section>
+
+    <!-- Flow Section -->
+    <section class="section">
+      <div class="container-narrow">
+        <div class="text-center" style="margin-bottom: var(--space-3xl);">
+          <div class="eyebrow">Step by Step</div>
+          <h2 class="font-serif" style="font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 600; margin-bottom: var(--space-md);">理想の目元への6つのステップ</h2>
+          <p class="text-muted">初回カウンセリングから仕上げまで、丁寧にご案内いたします</p>
+        </div>
+        
+        <div style="max-width: 900px; margin: 0 auto;">
+          <!-- Step 1 -->
+          <div class="flow-step">
+            <div class="flow-number">01</div>
+            <div class="flow-content">
+              <h3 class="flow-title">カウンセリング・ヒアリング</h3>
+              <p class="flow-description">
+                完全個室にてゆっくりとカウンセリングを行います。お客様のライフスタイル、なりたいイメージ、現在のお悩みなどを詳しくお聞かせください。
+              </p>
+              <div class="flow-details">
+                <h4>このステップで確認すること</h4>
+                <ul>
+                  <li>ライフスタイルとメイクの頻度</li>
+                  <li>理想のイメージと参考写真</li>
+                  <li>アレルギーや肌トラブルの有無</li>
+                  <li>過去の施術歴と満足度</li>
+                  <li>メンテナンス頻度のご希望</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flow-step">
+            <div class="flow-number">02</div>
+            <div class="flow-content">
+              <h3 class="flow-title">骨格診断・デザイン設計</h3>
+              <p class="flow-description">
+                黄金比を基にした科学的なアプローチで、お客様の骨格に最も似合うデザインを設計します。理想と骨格のバランスを考慮した最適なデザインをご提案します。
+              </p>
+              <div class="flow-details">
+                <h4>デザイン設計のポイント</h4>
+                <ul>
+                  <li>顔の黄金比に基づく測定</li>
+                  <li>目の形状と眉・まつ毛のバランス</li>
+                  <li>骨格に合わせた似合わせ設計</li>
+                  <li>左右差の調整とバランス</li>
+                  <li>理想イメージとの調整</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flow-step">
+            <div class="flow-number">03</div>
+            <div class="flow-content">
+              <h3 class="flow-title">パッチテスト・前処理</h3>
+              <p class="flow-description">
+                安全な施術のため、使用する薬剤でのパッチテストを行います。その後、施術部位のクレンジングと前処理を丁寧に行い、施術の準備を整えます。
+              </p>
+              <div class="flow-details">
+                <h4>安全への取り組み</h4>
+                <ul>
+                  <li>薬剤アレルギーの事前確認</li>
+                  <li>肌状態のチェックと記録</li>
+                  <li>施術部位の清潔な前処理</li>
+                  <li>毛質・肌質に合わせた薬剤選択</li>
+                  <li>施術中の体調確認</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flow-step">
+            <div class="flow-number">04</div>
+            <div class="flow-content">
+              <h3 class="flow-title">施術・技術の実施</h3>
+              <p class="flow-description">
+                パリジェンヌラッシュリフト、ハリウッドブロウリフトなど、世界最先端の技術を用いて施術を行います。快適にお過ごしいただけるよう、リラックスできる環境を整えています。
+              </p>
+              <div class="flow-details">
+                <h4>施術中のケア</h4>
+                <ul>
+                  <li>痛みや違和感の定期的な確認</li>
+                  <li>施術工程の説明とご案内</li>
+                  <li>リラックスできる音楽と照明</li>
+                  <li>適切な薬剤の塗布時間管理</li>
+                  <li>仕上がりの途中確認</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="flow-step">
+            <div class="flow-number">05</div>
+            <div class="flow-content">
+              <h3 class="flow-title">仕上げ・最終調整</h3>
+              <p class="flow-description">
+                施術後の仕上がりを確認し、必要に応じて微調整を行います。左右のバランス、カールの角度、毛流れなど、細部まで丁寧に仕上げます。
+              </p>
+              <div class="flow-details">
+                <h4>仕上げのチェックポイント</h4>
+                <ul>
+                  <li>左右対称性の最終確認</li>
+                  <li>理想イメージとの照合</li>
+                  <li>自然な毛流れの調整</li>
+                  <li>カール角度の微調整</li>
+                  <li>お客様との仕上がり確認</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="flow-step">
+            <div class="flow-number">06</div>
+            <div class="flow-content">
+              <h3 class="flow-title">アフターケア・次回予約</h3>
+              <p class="flow-description">
+                美しい仕上がりを長く保つためのアフターケア方法をご説明します。また、次回のメンテナンス時期についてもご相談いただけます。
+              </p>
+              <div class="flow-details">
+                <h4>アフターケアのご案内</h4>
+                <ul>
+                  <li>当日・翌日の注意事項</li>
+                  <li>美しさを保つケア方法</li>
+                  <li>推奨メンテナンス時期</li>
+                  <li>次回予約の割引特典</li>
+                  <li>気になることがあった場合の対応</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Duration Section -->
+    <section style="background: var(--color-paper); padding: var(--space-3xl) 0;">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: var(--space-2xl);">
+          <div class="eyebrow">Duration</div>
+          <h2 class="font-serif" style="font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 600; margin-bottom: var(--space-md);">施術時間の目安</h2>
+          <p class="text-muted">メニューごとの所要時間をご案内します</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-xl);">
+          <div style="background: white; padding: var(--space-xl); border-radius: var(--border-radius-lg); border: 1px solid var(--color-line); text-align: center;">
+            <div style="width: 60px; height: 60px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin: 0 auto var(--space-lg);">👁️</div>
+            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: var(--space-sm);">パリジェンヌラッシュリフト</h3>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: var(--space-sm);">約60分</div>
+            <p style="color: var(--color-text-muted); font-size: 0.875rem;">カウンセリングから仕上げまで</p>
+          </div>
+          
+          <div style="background: white; padding: var(--space-xl); border-radius: var(--border-radius-lg); border: 1px solid var(--color-line); text-align: center;">
+            <div style="width: 60px; height: 60px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin: 0 auto var(--space-lg);">💫</div>
+            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: var(--space-sm);">ハリウッドブロウリフト</h3>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: var(--space-sm);">約70分</div>
+            <p style="color: var(--color-text-muted); font-size: 0.875rem;">デザイン設計含む</p>
+          </div>
+          
+          <div style="background: white; padding: var(--space-xl); border-radius: var(--border-radius-lg); border: 1px solid var(--color-line); text-align: center;">
+            <div style="width: 60px; height: 60px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin: 0 auto var(--space-lg);">✨</div>
+            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: var(--space-sm);">プレミアムセット</h3>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: var(--space-sm);">約120分</div>
+            <p style="color: var(--color-text-muted); font-size: 0.875rem;">眉・まつ毛同時施術</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+      <div class="container-narrow">
+        <div class="text-center" style="margin-bottom: var(--space-2xl);">
+          <div class="eyebrow">FAQ</div>
+          <h2 class="font-serif" style="font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 600; margin-bottom: var(--space-md);">よくあるご質問</h2>
+          <p class="text-muted">施術について気になることをまとめました</p>
+        </div>
+        
+        <div style="max-width: 700px; margin: 0 auto;">
+          <div style="background: white; border: 1px solid var(--color-line); border-radius: var(--border-radius-lg); margin-bottom: var(--space-lg); overflow: hidden;">
+            <div style="padding: var(--space-lg); border-bottom: 1px solid var(--color-line);">
+              <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-sm);">施術前に注意することはありますか？</h3>
+              <p style="color: var(--color-text-muted); line-height: 1.6;">
+                施術前24時間はアイメイクを控えめにし、当日はマスカラやアイラインを避けてご来店ください。コンタクトレンズは外していただきますので、眼鏡をお持ちください。
+              </p>
+            </div>
+          </div>
+          
+          <div style="background: white; border: 1px solid var(--color-line); border-radius: var(--border-radius-lg); margin-bottom: var(--space-lg); overflow: hidden;">
+            <div style="padding: var(--space-lg); border-bottom: 1px solid var(--color-line);">
+              <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-sm);">施術後のケアについて教えてください</h3>
+              <p style="color: var(--color-text-muted); line-height: 1.6;">
+                施術後24時間は水濡れを避け、激しい運動やサウナもお控えください。3日程度で完全に定着しますので、それまでは優しくお取り扱いください。
+              </p>
+            </div>
+          </div>
+          
+          <div style="background: white; border: 1px solid var(--color-line); border-radius: var(--border-radius-lg); margin-bottom: var(--space-lg); overflow: hidden;">
+            <div style="padding: var(--space-lg); border-bottom: 1px solid var(--color-line);">
+              <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: var(--space-sm);">どのくらいの頻度でメンテナンスが必要ですか？</h3>
+              <p style="color: var(--color-text-muted); line-height: 1.6;">
+                パリジェンヌラッシュリフトは6-8週間、ハリウッドブロウリフトは6-8週間程度持続します。美しい状態を保つため、定期的なメンテナンスをおすすめしています。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="background: var(--color-secondary); padding: var(--space-3xl) 0;">
+      <div class="container-narrow text-center">
+        <h2 class="font-serif" style="font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 600; margin-bottom: var(--space-lg);">理想の目元への第一歩を</h2>
+        <p style="color: var(--color-text-muted); margin-bottom: var(--space-xl); line-height: 1.8;">
+          完全個室での丁寧なカウンセリングから始まります。<br>
+          お気軽にご相談ください。
+        </p>
+        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+          <a href="https://beauty.hotpepper.jp/kr/slnH000614329/" target="_blank" rel="noopener" class="btn btn--primary" style="padding: var(--space-md) var(--space-xl);">Web予約はこちら</a>
+          <a href="/menu" class="btn" style="padding: var(--space-md) var(--space-xl); background: white; color: var(--color-primary); border: 2px solid var(--color-primary);">メニューを見る</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="background: var(--color-paper); border-top: 1px solid var(--color-line);">
+    <div class="container" style="padding: var(--space-2xl) var(--space-lg) var(--space-xl);">
+      <div class="text-center">
+        <div class="font-serif" style="font-size: 1.5rem; font-weight: 600; margin-bottom: var(--space-sm);">Beauty Brow</div>
+        <div style="font-size: 0.625rem; color: var(--color-text-muted); margin-bottom: var(--space-lg);">眉×まつ毛パーマ専門</div>
+        
+        <div style="display: flex; justify-content: center; gap: var(--space-lg); margin-bottom: var(--space-lg); flex-wrap: wrap;">
+          <a href="/" style="color: var(--color-text-muted); text-decoration: none; font-size: 0.875rem;">ホーム</a>
+          <a href="/about" style="color: var(--color-text-muted); text-decoration: none; font-size: 0.875rem;">私たちについて</a>
+          <a href="/menu" style="color: var(--color-text-muted); text-decoration: none; font-size: 0.875rem;">メニュー</a>
+          <a href="/flow" style="color: var(--color-primary); text-decoration: none; font-size: 0.875rem;">施術の流れ</a>
+          <a href="/salon" style="color: var(--color-text-muted); text-decoration: none; font-size: 0.875rem;">店舗情報</a>
+          <a href="/recruit" style="color: var(--color-text-muted); text-decoration: none; font-size: 0.875rem;">採用情報</a>
+        </div>
+        
+        <p style="font-size: 0.75rem; color: var(--color-text-light);">&copy; 2025 Beauty Brow. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
